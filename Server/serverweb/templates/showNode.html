@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
+    <!--每10秒自动刷新网页-->
+    <title>传感器数据展示</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>湿度</td>
+                <td>温度</td>
+            </tr>
+        </thead>
+        {%for line in form%}
+        <tr>
+            <td>{{line.ID}}</td>
+            <td>{{line.humidity}}</td>
+            <td>{{line.temprature}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
